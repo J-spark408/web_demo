@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-import { contactInfo } from "../data/restaurantInfo";
 
 const ContactCTA: React.FC = () => {
   return (
@@ -11,7 +10,7 @@ const ContactCTA: React.FC = () => {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
+            "url('https://www.columbusmonthly.com/gcdn/authoring/authoring-images/2024/05/09/NCOM/73633682007-cm-korean-bbq-tj-04.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -29,8 +28,8 @@ const ContactCTA: React.FC = () => {
             Reserve Your Table Today
           </h2>
           <p className="text-xl text-gray-300 mb-10">
-            Join us for an unforgettable dining experience. Book your table now
-            or contact us for more information.
+            Join us for an unforgettable dining experience. Call to reserve your
+            table now or message us for more information.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -39,14 +38,14 @@ const ContactCTA: React.FC = () => {
               className="flex items-center justify-center space-x-3 bg-white text-primary-900 py-4 px-6 rounded-md font-medium hover:bg-gray-100 transition-colors"
             >
               <Phone size={20} />
-              <span>{contactInfo.phone}</span>
+              <span>Call us</span>
             </a>
             <Link
               to="/contact"
               className="flex items-center justify-center space-x-3 bg-primary-600 text-white py-4 px-6 rounded-md font-medium hover:bg-primary-700 transition-colors"
             >
               <Calendar size={20} />
-              <span>Make a Reservation</span>
+              <span>Message us</span>
             </Link>
           </div>
         </motion.div>

@@ -1,36 +1,39 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const MenuPreview: React.FC = () => {
   const categories = [
     {
-      title: 'Appetizers',
-      image: 'https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-      description: 'Start your meal with our delicious appetizers.',
+      title: "Brisket",
+      image:
+        "https://www.kevinschoices.com/cdn/shop/files/korean_thin_slice_brisket_01.jpg?v=1742352931",
+      description: "Start your meal with our delicious slice of brisket.",
     },
     {
-      title: 'Main Courses',
-      image: 'https://images.pexels.com/photos/1860208/pexels-photo-1860208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-      description: 'Discover our selection of gourmet entrées.',
+      title: "LA Galbi",
+      image:
+        "https://cdn11.bigcommerce.com/s-qxyhjadm8d/images/stencil/1280x1280/products/280/531/33fc66b59e314ff99c938c14599bed7a---item_main---ab33d5b2-be15-4031-8c03-0f0dca401672__22358.1724874620.jpg?c=1",
+      description: "Discover our exceptional quality marbling galbi.",
     },
     {
-      title: 'Desserts',
-      image: 'https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-      description: 'Complete your dining experience with a sweet treat.',
+      title: "Pork Belly",
+      image: "https://i.redd.it/elq36q3niifa1.jpg",
+      description: "Complete you Korean grill cravings with pork belly.",
     },
     {
-      title: 'Drinks',
-      image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-      description: 'Pair your meal with the perfect beverage.',
-    }
+      title: "Drinks",
+      image:
+        "https://www.campariacademy.com/wp-content/uploads/2023/08/Soju.jpg",
+      description: "Pair your meal with the perfect beverage.",
+    },
   ];
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -41,7 +44,9 @@ const MenuPreview: React.FC = () => {
             Explore Our Menu
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our carefully crafted dishes made from the freshest ingredients, combining traditional flavors with innovative techniques.
+            Discover our carefully crafted dishes made from the freshest
+            ingredients, combining traditional flavors with innovative
+            techniques.
           </p>
         </motion.div>
 
@@ -57,9 +62,9 @@ const MenuPreview: React.FC = () => {
             >
               <div className="rounded-lg shadow-md overflow-hidden bg-white">
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={category.image} 
-                    alt={category.title} 
+                  <img
+                    src={category.image}
+                    alt={category.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -69,9 +74,6 @@ const MenuPreview: React.FC = () => {
                 </div>
                 <div className="p-6">
                   <p className="text-gray-600 mb-4">{category.description}</p>
-                  <Link to="/menu" className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors">
-                    View dishes <ArrowRight size={16} className="ml-2" />
-                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -79,8 +81,8 @@ const MenuPreview: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link 
-            to="/menu" 
+          <Link
+            to="/menu"
             className="inline-block bg-primary-600 text-white py-3 px-8 rounded-md font-medium hover:bg-primary-700 transition-colors"
           >
             View Full Menu

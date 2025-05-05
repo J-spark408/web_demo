@@ -23,20 +23,6 @@ const Hero: React.FC = () => {
           <p className="text-xl text-gray-100 mb-8">
             Savor the flavors and quality of our finest ingredients.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* <a
-              href="#"
-              className="bg-primary-600 text-white py-3 px-8 rounded-md font-medium text-center hover:bg-primary-700 transition-colors"
-            >
-              View Menu
-            </a>
-            <a
-              href="#"
-              className="bg-transparent border-2 border-white text-white py-3 px-8 rounded-md font-medium text-center hover:bg-white hover:text-gray-900 transition-colors"
-            >
-              Make a Reservation
-            </a> */}
-          </div>
         </motion.div>
       </div>
 

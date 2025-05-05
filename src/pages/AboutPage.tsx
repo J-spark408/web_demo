@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { restaurantDescription, openingHours } from "../data/restaurantInfo";
 import { Clock, Award, Users, Utensils } from "lucide-react";
+import ContactCTA from "../components/ContactCTA";
 
 const AboutPage: React.FC = () => {
   return (
@@ -63,28 +64,28 @@ const AboutPage: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="h-64 overflow-hidden rounded-lg">
                   <img
-                    src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+                    src="https://cdn.vox-cdn.com/uploads/chorus_image/image/72963582/2023_08_02_Baekjeong_SJ_025__edited_.0.jpg"
                     alt="Restaurant interior"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="h-64 sm:mt-12 overflow-hidden rounded-lg">
                   <img
-                    src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+                    src="https://www.letsmeatnyc.com/wp-content/uploads/2018/09/2018_8_23_letsmeat_screenshot_12.jpg"
                     alt="Chef preparing food"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="h-64 overflow-hidden rounded-lg">
                   <img
-                    src="https://images.pexels.com/photos/2696064/pexels-photo-2696064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+                    src="https://blog.resy.com/wp-content/uploads/2024/02/originkbbq-9550.jpg"
                     alt="Restaurant exterior"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="h-64 sm:mt-12 overflow-hidden rounded-lg">
                   <img
-                    src="https://images.pexels.com/photos/541216/pexels-photo-541216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+                    src="https://nashvillelifestyles.com/downloads/29118/download/Babo%20Nashville%20Lifestyles-4.jpg?cb=f77f8e30ac0ceb5b83d6d7a9c87f74e7&w=1500&h="
                     alt="Signature dish"
                     className="w-full h-full object-cover"
                   />
@@ -229,30 +230,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-serif font-bold mb-6">
-              Experience Gabin LA Today
-            </h2>
-            <p className="text-xl max-w-2xl mx-auto mb-8">
-              Join us for an unforgettable dining experience. Make a reservation
-              or visit us today.
-            </p>
-            <a
-              href="/contact"
-              className="bg-white text-primary-900 py-3 px-8 rounded-md font-medium hover:bg-gray-100 transition-colors"
-            >
-              Contact Us
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      <ContactCTA />
     </div>
   );
 };

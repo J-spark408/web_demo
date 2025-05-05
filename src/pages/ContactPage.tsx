@@ -2,15 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { contactInfo, openingHours } from "../data/restaurantInfo";
 import googleMap from "../assets/images/GabinGoogleMap.png";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Send,
-  Calendar,
-  HelpCircle,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, HelpCircle } from "lucide-react";
 
 const ContactPage: React.FC = () => {
   const [formStatus, setFormStatus] = useState<{
@@ -107,11 +99,11 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Reservation Form and Contact Info Section */}
+      {/* Find us and Contact Info Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Reservation Form */}
+            {/* Find Us */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -119,177 +111,6 @@ const ContactPage: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
-                {/* <h2 className="text-3xl font-serif font-bold mb-6">
-                  Make a Reservation
-                </h2>
-
-                {formStatus?.submitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className={`p-4 mb-6 rounded-md ${
-                      formStatus.success
-                        ? "bg-green-50 text-green-800"
-                        : "bg-red-50 text-red-800"
-                    }`}
-                  >
-                    <p>{formStatus.message}</p>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Full Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                          placeholder="John Doe"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Email Address
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                          placeholder="johndoe@example.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="phone"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                          placeholder={contactInfo.phone}
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="guests"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Number of Guests
-                        </label>
-                        <select
-                          id="guests"
-                          name="guests"
-                          value={formData.guests}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        >
-                          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
-                            (num) => (
-                              <option key={num} value={num}>
-                                {num} {num === 1 ? "Person" : "People"}
-                              </option>
-                            )
-                          )}
-                          <option value="more">More than 12</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="date"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Preferred Date
-                        </label>
-                        <input
-                          type="date"
-                          id="date"
-                          name="date"
-                          value={formData.date}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="time"
-                          className="block text-sm font-medium text-gray-700 mb-1"
-                        >
-                          Preferred Time
-                        </label>
-                        <input
-                          type="time"
-                          id="time"
-                          name="time"
-                          value={formData.time}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-medium text-gray-700 mb-1"
-                      >
-                        Special Requests
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={4}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                        placeholder="Any dietary restrictions or special occasions?"
-                      ></textarea>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full bg-primary-600 text-white py-3 px-8 rounded-md font-medium hover:bg-primary-700 transition-colors flex justify-center items-center space-x-2"
-                    >
-                      <Calendar size={20} />
-                      <span>Request Reservation</span>
-                    </button>
-
-                    <p className="text-sm text-gray-500 mt-2">
-                      * We'll contact you to confirm your reservation.
-                    </p>
-                  </form>
-                )} */}
                 <div className="container mx-auto px-4">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -310,7 +131,6 @@ const ContactPage: React.FC = () => {
 
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <div className="aspect-w-16 aspect-h-9 h-[400px] bg-gray-200 relative">
-                      {/* For a real implementation, integrate Google Maps or another map provider */}
                       <div
                         className="absolute inset-0 bg-cover bg-center"
                         style={{
@@ -427,58 +247,6 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-serif font-bold mb-4">Find Us</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Located in the heart of the Los Angeles Korea Town, we're easily
-              accessible by public transportation and offer valet parking for
-              our guests.
-            </p>
-          </motion.div>
-
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <div className="aspect-w-16 aspect-h-9 h-[400px] bg-gray-200 relative">
-              {/* For a real implementation, integrate Google Maps or another map provider 
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${googleMap})`,
-                }}
-              >
-                <div className="flex justify-center items-center h-full">
-                  <div className="bg-white p-4 rounded-lg shadow-lg max-w-sm">
-                    <h3 className="font-bold text-lg mb-2">
-                      Gabin LA Restaurant
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {contactInfo.address.street}, {contactInfo.address.city}
-                    </p>
-                    <a
-                      href="https://www.google.com/maps/place/400+S+Western+Ave+Unit+104,+Los+Angeles,+CA+90020/@34.0670509,-118.3111915,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2b89a29ee2379:0xafe90616d5475be6!8m2!3d34.0670509!4d-118.3086166!16s%2Fg%2F11n09cp6ry?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-primary-600 text-white py-2 px-4 rounded-md font-medium hover:bg-primary-700 transition-colors inline-flex items-center"
-                    >
-                      <MapPin size={16} className="mr-2" />
-                      Get Directions
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -528,7 +296,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Message Us Form */}
       <section className="py-16 bg-primary-950 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -607,9 +375,10 @@ const ContactPage: React.FC = () => {
                   </label>
                   <input
                     id="subject"
-                    name="subjecct"
+                    name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    required
                     className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                     placeholder="Subject"
                   />
@@ -626,6 +395,7 @@ const ContactPage: React.FC = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    required
                     rows={4}
                     className="w-full text-black px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                     placeholder="Your message"

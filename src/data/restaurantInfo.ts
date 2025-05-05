@@ -71,11 +71,11 @@ export const socialMedia: SocialMedia[] = [
 
 export const restaurantDescription = {
   short: 'Gabin LA is a Korean Grill restaurant offering exquisite cuisine in an elegant atmosphere.',
-  full: `Gabin LA has been a culinary landmark in the heart of the city, offering an exceptional dining experience that combines traditional flavors with innovative techniques.
+  full: `Gabin Korean BBQ was born from a desire to share the authentic taste of Korea, built upon a foundation of quality ingredients and time-honored culinary traditions.
 
-Our executive chef, Marco Bianchi, brings over 20 years of international experience to create dishes that are both familiar and surprising, using only the freshest seasonal ingredients sourced from local farmers and producers.
+Our story is deeply rooted in the expertise of our chefs, particularly our naengmyeon master.
 
-The elegant yet comfortable atmosphere, attentive service, and carefully curated wine list complement the outstanding cuisine, making a the perfect destination for special occasions, business dinners, or simply a memorable night out.
+With years of dedicated experience, they craft the perfect chilled buckwheat noodles, a refreshing and flavorful counterpoint to our premium grilled meats.
 
-We pride ourselves on our commitment to sustainability, supporting local agriculture, and minimizing our environmental footprint while providing an unforgettable dining experience.`
+This dedication to both exceptional BBQ and the art of naengmyeon is what sets the Gabin experience apart.`
 };

@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center">
-            <span className="text-2xl md:text-3xl font-serif font-bold text-primary-300">
+            <span className="text-2xl md:text-3xl font-serif font-bold text-primary-300 hover:text-primary-600">
               Gabin LA
             </span>
           </NavLink>

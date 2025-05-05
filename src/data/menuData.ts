@@ -16,145 +16,166 @@ export interface MenuCategory {
 
 export const menuCategories: MenuCategory[] = [
   {
-    id: 'starters',
-    name: 'Starters',
-    description: 'Begin your culinary journey with these exquisite appetizers.'
+    id: "combos",
+    name: "Combo",
+    description: "Begin your culinary journey with these exquisite appetizers.",
   },
   {
-    id: 'main-courses',
-    name: 'Main Courses',
-    description: 'Savor our chef\'s signature entrées, crafted with the finest ingredients.'
+    id: "beef",
+    name: "Beef",
+    description:
+      "Savor our chef's signature entrées, crafted with the finest ingredients.",
   },
   {
-    id: 'seafood',
-    name: 'From the Ocean',
-    description: 'Fresh seafood delicacies sourced sustainably from local waters.'
+    id: "pork",
+    name: "Pork",
+    description:
+      "Fresh seafood delicacies sourced sustainably from local waters.",
   },
   {
-    id: 'desserts',
-    name: 'Desserts',
-    description: 'Complete your dining experience with our decadent sweet creations.'
+    id: "noodle",
+    name: "Noodle",
+    description:
+      "Complete your dining experience with our decadent sweet creations.",
   },
   {
-    id: 'beverages',
-    name: 'Beverages',
-    description: 'Complement your meal with our selection of fine drinks.'
-  }
+    id: "drinks",
+    name: "Drink",
+    description: "Complement your meal with our selection of fine drinks.",
+  },
 ];
 
 export const menuItems: MenuItem[] = [
-  // Starters
+  // Combos
   {
     id: 1,
-    name: 'Truffle Arancini',
-    description: 'Crispy risotto balls infused with black truffle, served with saffron aioli',
-    price: '$14',
-    category: 'starters',
-    image: 'https://images.pexels.com/photos/5419336/pexels-photo-5419336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Vegetarian']
+    name: "Beef Combo",
+    description:
+      "Prime Boneless Short Rib, Seasoned Prime Boneless Short Rib, Brisket, Jigae (Kimchi or Soybean Paste)",
+    price: "$99",
+    category: "combos",
+    image:
+      "https://cdn.vox-cdn.com/thumbor/vSybHsDuxugoCIOwKkLs2C7vMSg=/0x0:720x477/1200x900/filters:focal(303x182:417x296):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/71829039/King_Chang.0.jpeg",
+    tags: ["Beef", "Jigae"],
   },
   {
     id: 2,
-    name: 'Burrata Caprese',
-    description: 'Creamy burrata cheese with heirloom tomatoes, basil, and aged balsamic reduction',
-    price: '$16',
-    category: 'starters',
-    image: 'https://images.pexels.com/photos/11220209/pexels-photo-11220209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Vegetarian', 'Gluten-Free']
+    name: "Pork Combo",
+    description:
+      "Pork Belly, Pork Jowl, Thinnly Pork Belly, Jigae (Kimchi or Soybean Paste)",
+    price: "$79",
+    category: "combos",
+    image:
+      "https://cavilllane.com.au/storage/2023/09/korean-kitchen-700x783-1.jpg",
+    tags: ["Pork", "Jigae"],
   },
   {
     id: 3,
-    name: 'Seared Scallops',
-    description: 'Pan-seared sea scallops with cauliflower purée, pancetta, and micro herbs',
-    price: '$18',
-    category: 'starters',
-    image: 'https://images.pexels.com/photos/3338681/pexels-photo-3338681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+    name: "Gabin Combo",
+    description:
+      "LA Galbi, Brisket, Pork Belly, Jigae (Kimchi or Soybean Paste), Naengmyun",
+    price: "$149",
+    category: "combos",
+    image:
+      "https://wooltariusa.com/cdn/shop/files/MOSTLOVEDK-BBQ.jpg?v=1700170305",
+    tags: ["Beef", "Pork", "Marinated", "Jigae", "Noodle"],
   },
-  
+
   // Main Courses
   {
     id: 4,
-    name: 'Filet Mignon',
-    description: '8oz grass-fed beef tenderloin with truffle mashed potatoes, seasonal vegetables, and red wine reduction',
-    price: '$38',
-    category: 'main-courses',
-    image: 'https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Gluten-Free']
+    name: "LA Galbi",
+    description: "",
+    price: "$52",
+    category: "beef",
+    image:
+      "https://www.tastingtable.com/img/gallery/10-best-cuts-of-meat-for-korean-bbq/short-rib-kalbi-1693923619.jpg",
+    tags: ["Beef", "Marinated"],
   },
   {
     id: 5,
-    name: 'Herb-Crusted Rack of Lamb',
-    description: 'Dijon and herb-crusted New Zealand lamb with rosemary jus, roasted fingerling potatoes, and glazed carrots',
-    price: '$42',
-    category: 'main-courses',
-    image: 'https://images.pexels.com/photos/6941001/pexels-photo-6941001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Signature Dish']
+    name: "Brisket",
+    description: "",
+    price: "$42",
+    category: "beef",
+    image:
+      "https://cdn.vox-cdn.com/thumbor/PCY9h5HTtqGyfiFsAFfyu2D0rM4=/0x0:2000x1333/1200x0/filters:focal(0x0:2000x1333):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/25355683/2024_03_22_KTeamBBQ_029.jpg",
+    tags: ["Beef", "Thin Cut"],
   },
   {
     id: 6,
-    name: 'Wild Mushroom Risotto',
-    description: 'Creamy Arborio rice with wild mushrooms, white truffle oil, and aged Parmesan',
-    price: '$28',
-    category: 'main-courses',
-    image: 'https://images.pexels.com/photos/6249737/pexels-photo-6249737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Vegetarian']
+    name: "Beef Belly",
+    description: "",
+    price: "$38",
+    category: "beef",
+    image:
+      "https://asianinspirations.com.au/wp-content/uploads/2024/01/Best-Meats-to-Savour-in-Korean-Barbecue_10-Brisket.jpg",
+    tags: ["Beef", "Thin Cut"],
   },
-  
+
   // Seafood
   {
     id: 7,
-    name: 'Chilean Sea Bass',
-    description: 'Miso-glazed sea bass with bok choy, shiitake mushrooms, and ginger-scallion sauce',
-    price: '$40',
-    category: 'seafood',
-    image: 'https://images.pexels.com/photos/8697539/pexels-photo-8697539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Gluten-Free']
+    name: "Pork Belly",
+    description: "",
+    price: "$40",
+    category: "pork",
+    image:
+      "https://youngocean.com/cdn/shop/files/porkbelly.jpg?v=1724882634",
+    tags: ["Pork"],
   },
   {
     id: 8,
-    name: 'Lobster Linguine',
-    description: 'Fresh Maine lobster with house-made linguine, cherry tomatoes, and lemon-butter sauce',
-    price: '$46',
-    category: 'seafood',
-    image: 'https://images.pexels.com/photos/725997/pexels-photo-725997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Signature Dish']
+    name: "Pork Jowl",
+    description: "",
+    price: "$46",
+    category: "pork",
+    image:
+      "https://youngocean.com/cdn/shop/products/PorkJowl28x5.jpg?v=1707433873",
+    tags: ["Pork"],
   },
-  
-  // Desserts
   {
     id: 9,
-    name: 'Molten Chocolate Cake',
-    description: 'Warm chocolate cake with a liquid center, served with vanilla bean ice cream and raspberry coulis',
-    price: '$14',
-    category: 'desserts',
-    image: 'https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Vegetarian']
+    name: "Thinnly Cut Pork",
+    description: "",
+    price: "$14",
+    category: "pork",
+    image:
+      "https://i0.wp.com/thebutteragedsteak.com/wp-content/uploads/sites/7/2021/06/Pork-Belly-Slice.jpg?fit=1024%2C1024&ssl=1",
+    tags: ["Pork", "Thin Cut"],
   },
+
+  // Desserts
   {
     id: 10,
-    name: 'Crème Brûlée',
-    description: 'Classic vanilla bean custard with caramelized sugar crust and fresh berries',
-    price: '$12',
-    category: 'desserts',
-    image: 'https://images.pexels.com/photos/8903468/pexels-photo-8903468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750',
-    tags: ['Vegetarian', 'Gluten-Free']
+    name: "Naengmyeon",
+    description: "Korean Cold Buck Wheat Noodles",
+    price: "$18",
+    category: "noodle",
+    image:
+      "https://i.pinimg.com/736x/67/59/a2/6759a2ffd465698c11a6d98d718807ee.jpg",
+    tags: ["Noodle"],
   },
-  
+
   // Beverages
   {
     id: 11,
-    name: 'Signature Craft Cocktails',
-    description: 'Hand-crafted cocktails using premium spirits and fresh ingredients',
-    price: '$16',
-    category: 'beverages',
-    image: 'https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+    name: "Soju",
+    description: "Fresh, Original, Flavor",
+    price: "$13",
+    category: "drinks",
+    image:
+      "https://static.bartenderspiritsawards.com/en/blog/images/w/1200/BartenderSpiritsAwardsUS-06282022033828000000-62babe046ee50.jpg",
+    tags: ["Soju"],
   },
   {
     id: 12,
-    name: 'Wine Selection',
-    description: 'Extensive wine list featuring both local and international selections',
-    price: 'Various',
-    category: 'beverages',
-    image: 'https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-  }
+    name: "Beer",
+    description: "Terra, Cass, Krush",
+    price: "$9",
+    category: "drinks",
+    image:
+      "https://beertasting.app/storage/media/2828034fdce464168d6d65c883514709/conversions/2024-11-10,-South-Korea,-Clear-Glass-Bottles-optimized.jpg",
+      tags: ["Beer"],
+    },
 ];
