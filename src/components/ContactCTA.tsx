@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const ContactCTA: React.FC = () => {
   return (
@@ -40,13 +39,13 @@ const ContactCTA: React.FC = () => {
               <Phone size={20} />
               <span>Call us</span>
             </a>
-            <Link
-              to="/contact"
+            <a
+              href="http://www.yelp.com"
               className="flex items-center justify-center space-x-3 bg-primary-600 text-white py-4 px-6 rounded-md font-medium hover:bg-primary-700 transition-colors"
             >
               <Calendar size={20} />
-              <span>Message us</span>
-            </Link>
+              <span>Make a Reservation</span>
+            </a>
           </div>
         </motion.div>
       </div>

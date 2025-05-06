@@ -1,8 +1,8 @@
-import React from 'react';
-import Hero from '../components/Hero';
-import MenuPreview from '../components/MenuPreview';
-import AboutPreview from '../components/AboutPreview';
-import ContactCTA from '../components/ContactCTA';
+import React from "react";
+import Hero from "../components/HomePage/Hero";
+import MenuPreview from "../components/HomePage/MenuPreview";
+import AboutPreview from "../components/HomePage/AboutPreview";
+import ContactCTA from "../components/ContactCTA";
 
 const HomePage: React.FC = () => {
   return (
